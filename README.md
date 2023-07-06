@@ -4,14 +4,14 @@
 🗣️ Embracing the beauty of diverse languages, I aim to foster deeper connections among fellow developers. As I delve into the captivating realms of French, Italian, and Spanish, I make linguistic barriers feel less daunting, creating an inclusive and accessible environment for all. Let's build bridges of understanding and collaboration! 🌟💬
 
 ## Fun Facts
-- ⚡ Fun fact: I can solve a Rubik's Cube, although it took me some time to master the technique.
+- 🧩 I can solve a Rubik's Cube!
 - 🌍 Travel enthusiast: I have a goal of traveling to every continent, exploring diverse cultures and meeting fascinating people.
 - ♟ Chess lover: Chess is my favorite strategic game, and I enjoy playing it in my leisure time.
 - 📚 Bookworm: Reading books is my ultimate passion, and I cherish my collection of thought-provoking novels and non-fiction works.
 
 ## Background and Experience
-- 🎓 Education: Fundação Escola Tecnica Liberato Salzano Vieira da Cunha (Curso de Eletrônica)
-- 💼 Work Experience: Sunsoft Sistemas de Informação
+- 🎓 Education: [Fundação Escola Tecnica Liberato Salzano Vieira da Cunha](https://www.liberato.com.br/) (Curso de Eletrônica)
+- 💼 Work Experience: [Sunsoft Sistemas de Informação](https://sunsoft.inf.br/)
 - 📱 Released Apps: I have developed and released four apps: Vendas, Produção, Entregas, and WMS. You can find them on the [Google Play Store](https://play.google.com/store/apps/developer?id=Sunsoft+Sistemas+de+Informa%C3%A7%C3%A3o).
 
 ## Commitment to Diversity and Inclusivity
