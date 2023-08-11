@@ -1,5 +1,5 @@
 # Greetings!
-🌍👋 Welcome! Bonjour! Ciao! ¡Hola! I'm FMorschel, a Brazilian developer with a captivating multilingual mission! ✨
+🌍👋 Olá! Welcome! Bonjour! Ciao! ¡Hola! I'm FMorschel, a Brazilian developer with a captivating multilingual mission! ✨
 
 🗣️ Embracing the beauty of diverse languages, I aim to foster deeper connections among fellow developers. As I delve into the captivating realms of French, Italian, and Spanish, I make linguistic barriers feel less daunting, creating an inclusive and accessible environment for all. Let's build bridges of understanding and collaboration! 🌟💬
 
