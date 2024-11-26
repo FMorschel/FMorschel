@@ -38,21 +38,13 @@ runs:
       run: |
         REPO="${{ inputs.repository }}"
         AUTHOR="${{ inputs.author }}"
-        API_URL="https://api.github.com/repos/${REPO}/commits?author=${AUTHOR}&per_page=100"
-        PAGE=1
-        COUNT=0
+        API_URL="https://api.github.com/search/commits?q=author:${AUTHOR}+repo:${REPO}"
+        
+        # Fetch commit count using GitHub's Search API (faster)
+        RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github.cloak-preview" "${API_URL}")
+        COMMIT_COUNT=$(echo "$RESPONSE" | jq '.total_count')
 
-        while true; do
-          RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" "${API_URL}&page=${PAGE}")
-          LENGTH=$(echo "$RESPONSE" | jq length)
-          if [ "$LENGTH" -eq 0 ]; then
-            break
-          fi
-          COUNT=$((COUNT + LENGTH))
-          PAGE=$((PAGE + 1))
-        done
-
-        echo "commit_count=$COUNT" >> $GITHUB_ENV
+        echo "commit_count=$COMMIT_COUNT" >> $GITHUB_ENV
 
     - name: Generate Badge
       shell: bash
