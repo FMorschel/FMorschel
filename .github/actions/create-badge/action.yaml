@@ -17,13 +17,16 @@ inputs:
   labelColor:
     description: "The background color for the badge label."
     required: false
-    default: "#0175C2" # Default to Dart's blue
+    default: "#0175C2" # Default to blue
   color:
     description: "The background color for the badge value."
     required: false
     default: "lightgray"
   outputPath:
     description: "Path and file name for the generated badge (e.g., 'badges/dart-commits.svg')."
+    required: true
+  token:
+    description: "GitHub token to authenticate API requests."
     required: true
 
 runs:
@@ -33,7 +36,7 @@ runs:
       id: count-commits
       shell: bash
       env:
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TOKEN: ${{ inputs.token }}
       run: |
         REPO="${{ inputs.repository }}"
         AUTHOR="${{ inputs.author }}"
