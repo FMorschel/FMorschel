@@ -82,9 +82,15 @@ runs:
         BADGE_URL="https://img.shields.io/static/v1?label=${ENCODED_TEXT}&message=${COMMIT_COUNT}&color=${COLOR}&labelColor=${LABEL_COLOR}&style=flat&logo=${LOGO}"
         echo "BADGE_URL: $BADGE_URL"
         curl -s "$BADGE_URL" -o badge.svg
+    
+        # Verify the badge.svg was downloaded
+        if [ ! -f badge.svg ]; then
+          echo "Error: badge.svg was not created."
+          exit 3
+        fi
 
     - name: Save Badge
       shell: bash
       run: |
         mkdir -p $(dirname "${{ inputs.outputPath }}")
-        mv badge.svg "${{ inputs.outputPath }}"
+        mv badge.svg "${{ inputs.outputPath }}" || { echo "Error: Failed to move badge.svg"; exit 3; }

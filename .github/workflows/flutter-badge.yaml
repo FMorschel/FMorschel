@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add badge.svg
-          git commit -m "Update commit badge"
+          git add "badges/flutter-commits.svg"
+          git commit -m "Update commit flutter badge"
           git push
