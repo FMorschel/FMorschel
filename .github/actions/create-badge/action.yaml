@@ -35,6 +35,8 @@ runs:
     - name: Count Commits
       id: count-commits
       shell: bash
+      env:
+        TOKEN: ${{ inputs.token }}
       run: |
         REPO="${{ inputs.repository }}"
         AUTHOR="${{ inputs.author }}"
