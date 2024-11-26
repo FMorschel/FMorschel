@@ -46,11 +46,13 @@ runs:
         COMMIT_COUNT=0
         while true; do
           # Fetch commit count using GitHub's Search API (faster, with pagination)
-          API_URL="https://api.github.com/search/commits?q=author:${AUTHOR}+repo:${REPO}&per_page=${PER_PAGE}&page=${PAGE}"
-          RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github.cloak-preview" "${API_URL}")
+          COMMITS_URL="${API_URL}&per_page=${PER_PAGE}&page=${PAGE}"
+          echo "Fetching commits from: $COMMITS_URL"
+          RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github.cloak-preview" "${COMMITS_URL}")
 
           # Get the number of commits from the current page
           LENGTH=$(echo "$RESPONSE" | jq '.items | length')
+          echo "Commits on page $PAGE: $LENGTH"
 
           # If no commits are returned, break out of the loop
           if [ "$LENGTH" -eq 0 ]; then
