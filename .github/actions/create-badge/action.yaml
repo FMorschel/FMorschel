@@ -39,10 +39,28 @@ runs:
         REPO="${{ inputs.repository }}"
         AUTHOR="${{ inputs.author }}"
         API_URL="https://api.github.com/search/commits?q=author:${AUTHOR}+repo:${REPO}"
-        
-        # Fetch commit count using GitHub's Search API (faster)
-        RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github.cloak-preview" "${API_URL}")
-        COMMIT_COUNT=$(echo "$RESPONSE" | jq '.total_count')
+        PER_PAGE=100
+        PAGE=1
+        COMMIT_COUNT=0
+        while true; do
+          # Fetch commit count using GitHub's Search API (faster, with pagination)
+          API_URL="https://api.github.com/search/commits?q=author:${AUTHOR}+repo:${REPO}&per_page=${PER_PAGE}&page=${PAGE}"
+          RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github.cloak-preview" "${API_URL}")
+
+          # Get the number of commits from the current page
+          LENGTH=$(echo "$RESPONSE" | jq '.items | length')
+
+          # If no commits are returned, break out of the loop
+          if [ "$LENGTH" -eq 0 ]; then
+            break
+          fi
+
+          # Increment the total commit count
+          COMMIT_COUNT=$((COMMIT_COUNT + LENGTH))
+
+          # Move to the next page
+          PAGE=$((PAGE + 1))
+        done
 
         echo "commit_count=$COMMIT_COUNT" >> $GITHUB_ENV
 
