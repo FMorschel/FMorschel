@@ -15,11 +15,11 @@ jobs:
       - name: Generate Commit Badge
         uses: ./.github/actions/create-badge
         with:
-          repository: "dart-lang/sdk"
+          repository: "flutter/flutter"
           author: "FMorschel"
           text: "Flutter SDK Commits"
           logo: "flutter"
-          labelColor: "#2302569B"
+          labelColor: "#02569B"
           color: "lightgray"
           outputPath: "badges/flutter-commits.svg"
           token: "${{ secrets.GITHUB_TOKEN }}"

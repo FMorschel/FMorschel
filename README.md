@@ -4,7 +4,9 @@
 🗣️ Embracing the beauty of diverse languages, I aim to foster deeper connections among fellow developers. As I delve into the captivating realms of French, Italian, and Spanish, I make linguistic barriers feel less daunting, creating an inclusive and accessible environment for all. Let's build bridges of understanding and collaboration! 🌟💬
 
 ## Background and Experience
-- ![Dart SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/commits.svg)
+
+- ![Dart SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/badges/dart-commits.svg)
+- ![Flutter SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/badges/flutter-commits.svg)
 - 🎓 Education: [Fundação Escola Tecnica Liberato Salzano Vieira da Cunha](https://www.liberato.com.br/) (Curso de Eletrônica)
 - 💼 Work Experience: [Sunsoft Sistemas de Informação](https://sunsoft.inf.br/)
 - 📱 Released Apps: I have developed and released four apps: Vendas, Produção, Entregas, and WMS. You can find them on the [Google Play Store](https://play.google.com/store/apps/developer?id=Sunsoft+Sistemas+de+Informa%C3%A7%C3%A3o).
