@@ -75,8 +75,12 @@ runs:
         LABEL_COLOR="${{ inputs.labelColor }}"
         LABEL_COLOR="${LABEL_COLOR//#/%23}"
         COLOR="${{ inputs.color }}"
-        BADGE_URL="https://img.shields.io/static/v1?label=${TEXT}&message=${COMMIT_COUNT}&color=${COLOR}&labelColor=${LABEL_COLOR}&style=flat&logo=${LOGO}"
-        echo "BADGE_URL: $BADGE_URL"  # Add this line
+        
+        # URL encode the TEXT by replacing spaces with %20
+        ENCODED_TEXT=$(echo "$TEXT" | sed 's/ /%20/g')
+        
+        BADGE_URL="https://img.shields.io/static/v1?label=${ENCODED_TEXT}&message=${COMMIT_COUNT}&color=${COLOR}&labelColor=${LABEL_COLOR}&style=flat&logo=${LOGO}"
+        echo "BADGE_URL: $BADGE_URL"
         curl -s "$BADGE_URL" -o badge.svg
 
     - name: Save Badge
