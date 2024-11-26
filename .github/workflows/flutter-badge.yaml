@@ -22,7 +22,6 @@ jobs:
           labelColor: "#00A9E0"
           color: "lightgray"
           outputPath: "badges/flutter-commits.svg"
-          token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Commit and Push Badge
         run: |
