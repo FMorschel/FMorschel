@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate Commit Badge
-        uses: ./.github/actions/create-badge.yaml
+        uses: ./.github/actions/create-badge
         with:
           repository: "dart-lang/sdk"
           author: "FMorschel"
