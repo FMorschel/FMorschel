@@ -19,7 +19,7 @@ jobs:
           author: "FMorschel"
           text: "Flutter SDK Commits"
           logo: "flutter"
-          labelColor: "#02569B"
+          labelColor: "#00A9E0"
           color: "lightgray"
           outputPath: "badges/flutter-commits.svg"
           token: "${{ secrets.GITHUB_TOKEN }}"
