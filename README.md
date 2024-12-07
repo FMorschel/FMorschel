@@ -5,8 +5,8 @@
 
 ## Background and Experience
 
-- ![Dart SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/badges/dart-commits.svg)
-- ![Flutter SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/badges/flutter-commits.svg)
+- [![Dart SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/badges/dart-commits.svg)](https://github.com/dart-lang/sdk/commits?author=FMorschel)
+- [![Flutter SDK Commits](https://raw.githubusercontent.com/fmorschel/fmorschel/main/badges/flutter-commits.svg)](https://github.com/flutter/flutter/commits?author=FMorschel)
 - 🎓 Education: [Fundação Escola Tecnica Liberato Salzano Vieira da Cunha](https://www.liberato.com.br/) (Curso de Eletrônica)
 - 💼 Work Experience: [Sunsoft Sistemas de Informação](https://sunsoft.inf.br/)
 - 📱 Released Apps: I have developed and released four apps: Vendas, Produção, Entregas, and WMS. You can find them on the [Google Play Store](https://play.google.com/store/apps/developer?id=Sunsoft+Sistemas+de+Informa%C3%A7%C3%A3o).
